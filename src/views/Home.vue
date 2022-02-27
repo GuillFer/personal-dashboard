@@ -44,14 +44,14 @@ export default {
     flex-grow:1;
   }
 
-  ::v-deep div.widget > div {
+  :deep(div.widget > div) {
     border: 1px solid lightgrey;
     border-radius: 4px;
     padding: 16px 8px 8px;
     position: relative;
   }
 
-  ::v-deep div.widget > div > .delete {
+  :deep(div.widget > div > .delete) {
     position: absolute;
     top: 4px;
     right: 4px;
@@ -59,11 +59,11 @@ export default {
     cursor: pointer;
   }
 
-  ::v-deep h4, ::v-deep h3 {
+  :deep(h4), :deep(h3) {
     margin:8px 0;
   }
 
-  ::v-deep .add {
+  :deep(.add) {
     cursor:pointer;
     position: absolute;
     top: 8px;

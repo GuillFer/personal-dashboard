@@ -119,7 +119,7 @@ export default {
   padding:0 16px;
 }
 
-::v-deep .favorite-form > .form-group {
+:deep(.favorite-form > .form-group) {
   flex-grow:1;
 }
 </style>
