@@ -3,18 +3,21 @@
     <div class="overlay-close" @click="closeOverlay">╳</div>
     <EventForm v-if="overlayData.model === 'event'" v-bind:editing="editing" />
     <TaskForm v-if="overlayData.model === 'task'" v-bind:editing="editing" />
+    <FavoriteForm v-if="overlayData.model === 'favorite'" v-bind:editing="editing" class="favorite-overlay"/>
   </div>
 </template>
 
 <script>
 import TaskForm from './task/TaskForm'
 import EventForm from './event/EventForm'
+import FavoriteForm from './favorite/FavoriteForm'
 
 export default {
   name: 'Overlay',
   components: {
     TaskForm,
-    EventForm
+    EventForm,
+    FavoriteForm
   },
   props: {
     editing:Boolean
@@ -63,4 +66,5 @@ export default {
 input {
   max-width:80%!important;
 }
+
 </style>

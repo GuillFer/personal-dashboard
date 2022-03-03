@@ -48,6 +48,7 @@ export default createStore({
     UPDATE_FAVORITE(state, favorite) {
       const index = state.favorites.indexOf(favorite)
       state.favorites[index] = favorite
+      state.favorites.sort((a, b) => a.order - b.order)
     },
     DELETE_FAVORITE(state, favorite) {
       const index = state.favorites.indexOf(favorite)
@@ -60,6 +61,9 @@ export default createStore({
     CLOSE_OVERLAY(state) {
       state.overlay.open = false
     }
+  },
+  actions: {
+
   },
   getters: {
     todos(state) {

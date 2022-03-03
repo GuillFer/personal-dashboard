@@ -3,7 +3,7 @@
     <label v-if="label">{{ label }}</label>
     <select
     :value="modelValue"
-    @change="$emit('update:modelValue', $event.target.checked)">
+    @change="$emit('update:modelValue', $event.target.value)">
       <option :key="option" v-for="option in options" :value="option">{{option}}</option>
     </select>
   </div>
@@ -21,8 +21,8 @@ export default {
       required: true
     },
     modelValue: {
-      type: Boolean,
-      default: true
+      type: String,
+      default: ''
     }
   }
 }
